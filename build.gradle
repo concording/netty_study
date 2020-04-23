@@ -3,7 +3,7 @@ plugins {
     id 'com.google.protobuf' version '0.8.8'
 }
 
-group 'com.thesevensky'
+group 'com.concord'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8

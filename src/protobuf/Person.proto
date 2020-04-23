@@ -3,7 +3,7 @@ syntax = "proto2";
 package com.thesevensky.protobuf;
 
 option optimize_for = SPEED;
-option java_package = "com.thesevensky.netty.protobuf";
+option java_package = "com.concord.netty.protobuf";
 option java_outer_classname = "MyDataInfo";
 
 message MyMessage {
