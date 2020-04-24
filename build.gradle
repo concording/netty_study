@@ -3,7 +3,7 @@ plugins {
     id 'com.google.protobuf' version '0.8.8'
 }
 
-group 'com.concord'
+group 'com.thesevensky'
 version '1.0-SNAPSHOT'
 
 sourceCompatibility = 1.8
@@ -32,16 +32,19 @@ dependencies {
 
 
 protobuf {
-    //这是直接生成到src下
-    generateProtoTasks.generatedFilesBaseDir = "$projectDir/src/generated"
+
     protoc {
         artifact = "com.google.protobuf:protoc:3.9.0"
     }
+
     plugins {
         grpc {
             artifact = 'io.grpc:protoc-gen-grpc-java:1.23.0'
         }
     }
+    //这是直接生成到src下
+    generateProtoTasks.generatedFilesBaseDir = "src"
+
     generateProtoTasks { 
         all()*.plugins {
             grpc {
